@@ -52,9 +52,10 @@ function turnClick() {
         return;
     }
 
-
     grid[r][c] = currPlayer;
     let cell = this;
+
+    document.getElementsByClassName("cell")[r * columns + c].innerText = currPlayer;
 
     if (currPlayer == playerX) {
         currPlayer = playerO;
@@ -62,7 +63,36 @@ function turnClick() {
         currPlayer = playerX;
     }
 
-    document.getElementsByClassName("cell")[r * columns + c].innerText = currPlayer;
+    
 
     console.log(grid);
+    checkWinner();
 }
+
+function checkWinner() {
+    console.log("I am checking")
+
+    //horizontally 
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < columns - 3; c++) {
+            if (grid[r][c] != '') {
+                if (grid[r][c] == grid[r][c+1] && grid[r][c+1] == grid[r][c+2] && grid[r][c+2] == grid[r][c+3]) {
+                    console.log("Winner Found horizontally")
+                    endGame(r, c);
+                    return;
+                }
+            }
+        }
+    }
+}
+
+function endGame(r, c) {
+    if (grid[r][c] == playerO) {
+        declareWinner("Player O Wins!")
+    } else {
+        declareWinner("Player X Wins!")
+    }
+}
+
+
+
