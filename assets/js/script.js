@@ -1,6 +1,6 @@
 
 let playerX = "X";
-let playerO = "0";
+let playerO = "O";
 let currPlayer = playerX;
 
 let gameOver = false;
@@ -25,9 +25,44 @@ function setGame() {
             let cell = document.createElement("div");
             cell.id = r.toString() + "-" + c.toString();
             cell.classList.add("cell");
+            cell.addEventListener("click", turnClick);
             document.getElementById("grid").append(cell);
         }
 
         grid.push(row);
     }
+
+    console.log(grid);
+
+}
+
+
+function turnClick() {
+    console.log('I am clicking')
+
+    if (gameOver) {
+        return;
+    }
+
+    let coords = this.id.split("-");
+    let r = parseInt(coords[0]);
+    let c = parseInt(coords[1]);
+
+    if(grid[r][c] !== '') {
+        return;
+    }
+
+
+    grid[r][c] = currPlayer;
+    let cell = this;
+
+    if (currPlayer == playerX) {
+        currPlayer = playerO;
+    } else {
+        currPlayer = playerX;
+    }
+
+    document.getElementsByClassName("cell")[r * columns + c].innerText = currPlayer;
+
+    console.log(grid);
 }
