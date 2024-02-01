@@ -1,6 +1,9 @@
 
 let playerX = "X";
 let playerO = "O";
+let playerXmoves = 0;
+let playerOmoves = 0;
+
 let currPlayer = playerX;
 
 let gameOver = false;
@@ -45,6 +48,8 @@ function startGame() {
     }
     gameOver = false;
     currPlayer = playerX;
+    playerXmoves = 0;
+    playerOmoves = 0;
     console.log(grid);
 }
 
@@ -67,7 +72,6 @@ function turnClick() {
 
     grid[r][c] = currPlayer;
     let cell = this;
-
     
     console.log('Setting innerText:', currPlayer);
 
@@ -75,14 +79,15 @@ function turnClick() {
 
     if (currPlayer == playerX) {
         currPlayer = playerO;
+        playerXmoves++;
     } else {
         currPlayer = playerX;
+        playerOmoves++;
     }
-
-    
 
     console.log(grid);
     checkWinner();
+    console.log(`Player O Moves: ${playerOmoves}, Player X Moves: ${playerXmoves}`);
 }
 
 function checkWinner() {
@@ -144,10 +149,10 @@ function checkWinner() {
 }
 
 function endGame(r, c) {
-    if (grid[r][c] == playerO) {
-        declareWinner("Player O Wins!")
+    if (grid[r][c] === playerO) {
+        declareWinner(`Player O Wins! in ${playerOmoves} moves`)
     } else {
-        declareWinner("Player X Wins!")
+        declareWinner(`Player X Wins! in ${playerXmoves} moves`)
     }
 }
 
