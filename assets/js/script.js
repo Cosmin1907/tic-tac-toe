@@ -124,6 +124,7 @@ function checkWinner() {
             }
         }
     }
+    checkTie();
 }
 
 function endGame(r, c) {
@@ -139,5 +140,12 @@ function declareWinner(who) {
     document.querySelector(".endgame .text").innerText = who;
 }
 
+
+function checkTie() {
+    if (!grid.flat().some(cell => cell === '')) {
+        declareWinner("Tie Game!")
+    }
+
+}
 
 
