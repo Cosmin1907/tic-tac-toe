@@ -44,7 +44,7 @@ body {
     font-size: 2em;
 }
 
-.scoreboard {
+.score {
     width: 315px;
     top: 20px;
     background-color: rgba(173, 216, 230, 0.8);
