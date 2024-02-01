@@ -25,20 +25,33 @@ function setGame() {
             let cell = document.createElement("div");
             cell.id = r.toString() + "-" + c.toString();
             cell.classList.add("cell");
-            cell.addEventListener("click", turnClick);
             document.getElementById("grid").append(cell);
         }
 
         grid.push(row);
     }
 
-    console.log(grid);
+    startGame();
 
+}
+
+function startGame() {
+    document.querySelector(".endgame").style.display = "none";
+    let cells = document.querySelectorAll(".cell");
+    grid.forEach(row => row.fill(''));
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].innerText = '';
+        cells[i].addEventListener("click", turnClick);
+    }
+    gameOver = false;
+    currPlayer = playerX;
+    console.log(grid);
 }
 
 
 function turnClick() {
     console.log('I am clicking')
+    console.log('Current Player:', currPlayer);
 
     if (gameOver) {
         return;
@@ -54,6 +67,9 @@ function turnClick() {
 
     grid[r][c] = currPlayer;
     let cell = this;
+
+    
+    console.log('Setting innerText:', currPlayer);
 
     document.getElementsByClassName("cell")[r * columns + c].innerText = currPlayer;
 
@@ -138,14 +154,16 @@ function endGame(r, c) {
 function declareWinner(who) {
     document.querySelector(".endgame").style.display = "block";
     document.querySelector(".endgame .text").innerText = who;
+    gameOver = true;
 }
 
 
 function checkTie() {
     if (!grid.flat().some(cell => cell === '')) {
         declareWinner("Tie Game!")
-    }
-
+    } 
 }
+
+
 
 
