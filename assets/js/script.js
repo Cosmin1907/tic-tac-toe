@@ -150,9 +150,9 @@ function checkWinner() {
 
 function endGame(r, c) {
     if (grid[r][c] === playerO) {
-        declareWinner(`Player O Wins! in ${playerOmoves} moves`)
+        declareWinner(`Player O Wins! \nin ${playerOmoves} moves`)
     } else {
-        declareWinner(`Player X Wins! in ${playerXmoves} moves`)
+        declareWinner(`Player X Wins! \nin ${playerXmoves} moves`)
     }
 }
 
