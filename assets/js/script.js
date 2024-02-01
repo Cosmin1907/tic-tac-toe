@@ -149,10 +149,15 @@ function checkWinner() {
 }
 
 function endGame(r, c) {
+    let playerXscore = 0;
+    let playerOscore = 0;
+
     if (grid[r][c] === playerO) {
         declareWinner(`Player O Wins! \nin ${playerOmoves} moves`)
+        playerOscore++;
     } else {
         declareWinner(`Player X Wins! \nin ${playerXmoves} moves`)
+        playerXscore++;
     }
 }
 
