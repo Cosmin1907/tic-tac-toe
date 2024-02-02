@@ -34,12 +34,9 @@ function setGame() {
             cell.classList.add("cell");
             document.getElementById("grid").append(cell);
         }
-
         grid.push(row);
     }
-
     startGame();
-
 }
 
 function startGame() {
@@ -161,7 +158,6 @@ function endGame(r, c) {
     if (grid[r][c] === playerO) {
         declareWinner(`Player O Wins! \nin ${playerOmoves} moves`)
         playerOscore++;
-        
     } else {
         declareWinner(`Player X Wins! \nin ${playerXmoves} moves`)
         playerXscore++;
@@ -175,7 +171,6 @@ function declareWinner(who) {
     document.querySelector(".endgame .text").innerText = who;
     gameOver = true;
 }
-
 
 function checkTie() {
     if (!grid.flat().some(cell => cell === '')) {
