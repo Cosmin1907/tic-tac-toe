@@ -14,14 +14,15 @@
       <p>Tic-Tac-Toe has ancient origins, with variations played by civilizations such as the Egyptians and Romans. </p>
       <p>However, the modern version we know gained popularity in the 20th century.</p>
     </div>
-    <button id="modalBtn">Instructions</button>
+    <button onClick="toggleinstructions()" id="modalBtn">Instructions</button>
     <div id="instr" class="modal">
       <div class="modal-content">
-        <span class="close">&times;</span>
+        <span onClick="toggleinstructions()" class="close">&times;</span>
         <p>Game Setup: Play on a 9x9 grid where 'X' and 'O' symbols are alternately placed in empty cells.</p>
         <p>Gameplay: The game continues until one player successfully forms a sequence of four symbols in a row, meeting the criteria of horizontal, vertical, diagonal, or anti-diagonal alignment, or until the entire grid is filled without a winner, resulting in a draw.</p>
       </div>
     </div>
     <a href="game.html" class="btn">Play Game</a>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

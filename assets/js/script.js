@@ -178,6 +178,17 @@ function checkTie() {
     } 
 }
 
+document.querySelector(".modal").style.display = "none";
+
+function toggleinstructions() {
+    let modal = document.querySelector(".modal")
+    if (modal.style.display === "none" ) {
+        modal.style.display = "block"
+    } else {
+        modal.style.display = "none"
+    }
+}
+
 
 
 
