@@ -54,7 +54,9 @@ function startGame() {
     currPlayer = playerX;
     playerXmoves = 0;
     playerOmoves = 0;
-    console.log(grid);
+    
+    let playerTurn = document.getElementById("player")
+    playerTurn.innerText = "X takes the opening move!"
 }
 
 
@@ -80,13 +82,16 @@ function turnClick() {
     console.log('Setting innerText:', currPlayer);
 
     document.getElementsByClassName("cell")[r * columns + c].innerText = currPlayer;
+    let playerTurn = document.getElementById("player")
 
     if (currPlayer == playerX) {
         currPlayer = playerO;
         playerXmoves++;
+        playerTurn.innerText = "X moves! O's turn."
     } else {
         currPlayer = playerX;
         playerOmoves++;
+        playerTurn.innerText = "O moves! X's turn."
     }
 
     console.log(grid);
