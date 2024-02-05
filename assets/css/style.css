@@ -13,7 +13,7 @@ body {
 #grid {
     height: 315px;
     width: 315px;
-    background-color: lightgray;
+    background-color: #C6D6C9;
 
     margin: 0 auto;
     display: flex;
@@ -32,11 +32,17 @@ body {
     cursor: pointer;
 }
 
+#intro {
+    background-color: #C6D6C9;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .endgame {
     display: none;
     width: 250px;
     top: 135px;
-    background-color: rgba(173, 216, 230, 0.8);
+    background-color: rgba(203, 138, 148, 0.8);
     
     position: absolute;
     left: 50%;
@@ -52,7 +58,7 @@ body {
 
 .score {
     width: 315px;
-    background-color: rgba(173, 216, 230, 0.8);
+    background-color: #A2AE95;
     
     padding-top: 10px;
     padding-bottom: 10px;
@@ -66,7 +72,7 @@ body {
 .modal {
     display: none;
     width: 300px;
-    background-color: rgba(173, 216, 230, 0.8);
+    background-color: rgba(203, 138, 148, 0.8);
     
     position: absolute;
     left: 50%;
@@ -80,15 +86,15 @@ body {
 }
 
 .close {
-    color: #aaaaaa;
+    color: #8D3D2F;
     float: right;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
   }
   
   .close:hover,
   .close:focus {
-    color: #000;
+    color: #57312D;
     text-decoration: none;
     cursor: pointer;
   }
