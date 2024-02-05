@@ -34,10 +34,43 @@ body {
 
 #intro {
     background-color: #C6D6C9;
-    padding-top: 20px;
+    padding: 20px 5px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+
+
+.score {
+    width: 315px;
+    background-color: #A2AE95;
+    
+    padding-top: 10px;
     padding-bottom: 20px;
     margin: 10px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
 }
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #57312D; 
+    color: #C6D6C9; 
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn:hover {
+    background-color: #CB8A94; 
+}
+
+.btn:active {
+    background-color: #8D3D2F; 
+}
+
 
 .endgame {
     display: none;
@@ -57,22 +90,10 @@ body {
     font-size: 2em;
 }
 
-.score {
-    width: 315px;
-    background-color: #A2AE95;
-    
-    padding-top: 10px;
-    padding-bottom: 20px;
-    margin: 10px;
-    text-align: center;
-    color: white;
-    font-size: 20px;
-}
-
 .modal {
     display: none;
-    width: 300px;
-    background-color: rgba(203, 138, 148, 0.8);
+    width: 250px;
+    background-color: rgba(203, 138, 148, 0.9);
     
     position: absolute;
     left: 50%;
