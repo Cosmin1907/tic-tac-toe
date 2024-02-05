@@ -76,7 +76,9 @@ body {
     color: #C6D6C9; 
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    
+    /* Smooth transition for hover effect */
+    transition: background-color 0.3s ease; 
 }
 
 .btn:hover {
@@ -91,12 +93,12 @@ body {
 .endgame {
     display: none;
     width: 250px;
-    top: 135px;
     background-color: rgba(203, 138, 148, 0.8);
     
     position: absolute;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -150%);
 
     padding-top: 50px;
     padding-bottom: 50px;
