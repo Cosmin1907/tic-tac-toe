@@ -36,6 +36,7 @@ body {
     background-color: #C6D6C9;
     padding-top: 20px;
     padding-bottom: 20px;
+    margin: 10px;
 }
 
 .endgame {
@@ -81,12 +82,14 @@ body {
     text-align: center;
     border-radius: 5px;
     color: white;
-    font-size: 1em;
+    font-size: 1.5em;
 }
 
 .close {
     color: #8D3D2F;
-    float: right;
+    position: absolute;
+    top: 5px;
+    right: 5px;
     font-size: 30px;
     font-weight: bold;
   }
