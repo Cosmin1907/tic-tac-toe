@@ -39,8 +39,6 @@ body {
     font-size: 20px;
 }
 
-
-
 .score {
     width: 315px;
     background-color: #A2AE95;
@@ -51,6 +49,24 @@ body {
     text-align: center;
     color: white;
     font-size: 20px;
+}
+
+#instrBtn {
+    background-color: #57312D;
+    color: #C6D6C9;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#replayBtn {
+    background-color: #57312D;
+    color: #C6D6C9;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .btn {
