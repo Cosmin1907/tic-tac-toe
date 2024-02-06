@@ -15,10 +15,10 @@ let gameOver = false;
 let rows = 9;
 let columns = 9;
 
+let interval;
+
 window.onload = function() {
     setGame(rows, columns);
-
-    /*document.getElementById("xlgrid").addEventListener("click", xlgrid);*/
 }
 
 /**
@@ -76,6 +76,8 @@ function startGame() {
     
     let playerTurn = document.getElementById("player")
     playerTurn.innerText = "X takes the opening move!"
+    resetCountDown();
+    
 }
 
 /**
@@ -112,7 +114,7 @@ function turnClick() {
     document.getElementsByClassName("cell")[r * columns + c].innerText = currPlayer;
     // Get the element representing whose turn it is and update it based on the current player
     let playerTurn = document.getElementById("player")
-
+    
     if (currPlayer == playerX) {
         currPlayer = playerO;
         playerXmoves++;
@@ -125,8 +127,30 @@ function turnClick() {
 
     console.log(grid);
     console.log(coords);
+    
     checkWinner();
+    resetCountDown();
+
     console.log(`Player O Moves: ${playerOmoves}, Player X Moves: ${playerXmoves}`);
+}
+
+function countDown() {
+
+    let count = 30;
+    interval = setInterval(function() {
+        count--;
+        console.log(count);
+        let time = document.getElementById("countdown");
+        time.innerText = `Next Move in: ${count} s`;
+        if(count === 0) {
+            clearInterval(interval); 
+        } 
+    }, 1000);
+}
+
+function resetCountDown() {
+    clearInterval(interval);
+    countDown(); // Restart the countdown timer
 }
 
 /**
@@ -239,13 +263,7 @@ function toggleinstructions() {
     }
 }
 
-/*function xlgrid() {
-    let gridSize = document.getElementById("grid");
-    gridSize.style.height = "420px";
-    gridSize.style.width = "420px";
 
-    setGame(12, 12);
-}*/
 
 
 
