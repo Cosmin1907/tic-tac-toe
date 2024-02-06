@@ -16,11 +16,21 @@ let rows = 9;
 let columns = 9;
 
 window.onload = function() {
-    setGame();
+    setGame(rows, columns);
+
+    /*document.getElementById("xlgrid").addEventListener("click", xlgrid);*/
 }
 
-function setGame() {
+/**
+ * Setting up the grid after the page is loaded
+ * by visualy creating the HTML elements 
+ * and records each cell based on its position in the grid.
+ */
+function setGame(rows, columns) {
     grid = [];
+
+    // Clear the existing grid
+    document.getElementById("grid").innerHTML = '';
 
     for (let r = 0; r < rows; r++) {
         let row = [];
@@ -39,14 +49,26 @@ function setGame() {
     startGame();
 }
 
+/**
+ * Resets the game to the initial state
+ * and initiates turnClick function
+ */
 function startGame() {
+    // Hide the element with the class "endgame" by setting its display property to "none"
     document.querySelector(".endgame").style.display = "none";
     let cells = document.querySelectorAll(".cell");
+
+    // Reset the game grid by filling each row with empty strings
     grid.forEach(row => row.fill(''));
+
+    // Loop through each cell and reset its innerText to an empty string,
+    // and add a click event listener that calls the function 'turnClick'
     for (let i = 0; i < cells.length; i++) {
         cells[i].innerText = '';
         cells[i].addEventListener("click", turnClick);
     }
+
+    // Reset game state variables
     gameOver = false;
     currPlayer = playerX;
     playerXmoves = 0;
@@ -56,29 +78,39 @@ function startGame() {
     playerTurn.innerText = "X takes the opening move!"
 }
 
-
+/**
+ * Handles the logic for a player`s move, 
+ * updating the game state, the visual representation on the board.
+ * and initiates the checkWinner function
+ */
 function turnClick() {
     console.log('I am clicking')
     console.log('Current Player:', currPlayer);
 
+    // Check if the game is already over, if so, return from the function
     if (gameOver) {
         return;
     }
 
+    // Extract the row and column from the clicked cell's id
     let coords = this.id.split("-");
     let r = parseInt(coords[0]);
     let c = parseInt(coords[1]);
 
+    // Check if the clicked cell is already occupied, if so, return from the function
     if(grid[r][c] !== '') {
         return;
     }
 
+    // Update the game grid with the current player's symbol (X or O)
     grid[r][c] = currPlayer;
     let cell = this;
     
     console.log('Setting innerText:', currPlayer);
 
+    // Update the visual representation of the game board by setting the innerText of the clicked cell
     document.getElementsByClassName("cell")[r * columns + c].innerText = currPlayer;
+    // Get the element representing whose turn it is and update it based on the current player
     let playerTurn = document.getElementById("player")
 
     if (currPlayer == playerX) {
@@ -92,10 +124,15 @@ function turnClick() {
     }
 
     console.log(grid);
+    console.log(coords);
     checkWinner();
     console.log(`Player O Moves: ${playerOmoves}, Player X Moves: ${playerXmoves}`);
 }
 
+/**
+ * After a move is made, it checks if the player has won, 
+ * and if so, it initiates the end-of-game process.
+ */
 function checkWinner() {
     console.log("I am checking")
 
@@ -154,6 +191,13 @@ function checkWinner() {
     checkTie();
 }
 
+/**
+ * Checks if the player who made the winning move is Player O or Player X.
+ * calls the function declareWinner with a message indicating the wining player,
+ * and updates the score
+ * @param {*represents the row indice} r 
+ * @param {*represents the column indice} c 
+ */
 function endGame(r, c) {
     if (grid[r][c] === playerO) {
         declareWinner(`Player O Wins! \nin ${playerOmoves} moves`)
@@ -166,11 +210,17 @@ function endGame(r, c) {
     document.querySelector(".score .playerO").innerText = `Player X: ${playerXscore}`;
 }
 
+/**
+ * It's called after the game logic has determined the winner, 
+ * and it updates the UI to reflect the outcome.
+ * @param {*holds the value passed to it when the function was called} who 
+ */
 function declareWinner(who) {
     document.querySelector(".endgame").style.display = "block";
     document.querySelector(".endgame .text").innerText = who;
     gameOver = true;
 }
+
 
 function checkTie() {
     if (!grid.flat().some(cell => cell === '')) {
@@ -189,6 +239,13 @@ function toggleinstructions() {
     }
 }
 
+/*function xlgrid() {
+    let gridSize = document.getElementById("grid");
+    gridSize.style.height = "420px";
+    gridSize.style.width = "420px";
+
+    setGame(12, 12);
+}*/
 
 
 

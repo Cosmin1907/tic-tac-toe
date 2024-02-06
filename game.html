@@ -17,7 +17,12 @@
 <body>
     <h2 id="player"></h2>
     <section id="game">
-        <div id="grid"></div>
+        <div id="gridsize">
+            <button id="lgrid">L 9x9</button>
+            <button id="xlgrid">XL 12x12</button>
+            <button id="xxlgrid">XXL 15x15</button>
+        </div>
+        <div id="grid" style="height: 315px; width: 315px;"></div>
         <div class="endgame">
             <div class="text"></div>
             <button onClick="startGame()" id="replayBtn">Replay</button>
