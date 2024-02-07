@@ -134,6 +134,10 @@ function turnClick() {
     console.log(`Player O Moves: ${playerOmoves}, Player X Moves: ${playerXmoves}`);
 }
 
+/**
+ * Start a timer that decrements count by one second
+ * Source: https://www.shecodes.io/ - was adapted to suit the purpose of the game
+ */
 function countDown() {
 
     let count = 30;
@@ -144,13 +148,48 @@ function countDown() {
         time.innerText = `Next Move in: ${count} s`;
         if(count === 0) {
             clearInterval(interval); 
+            skipTurn();
         } 
     }, 1000);
 }
 
+/**
+ * Restarts the countdown timer
+ */
 function resetCountDown() {
     clearInterval(interval);
-    countDown(); // Restart the countdown timer
+    countDown(); 
+}
+
+function skipTurn() {
+    let { row, column } = randomSpot();
+    if (!checkTie()) {
+        simulateClick(row, column);
+    }
+}
+
+function randomSpot() {
+    // Generate random row and column indices within the grid dimensions
+    let r = Math.floor(Math.random() * grid.length);
+    let c = Math.floor(Math.random() * grid[0].length);
+
+    // Check if the selected space is empty
+    if (grid[r][c] === '') {
+        return { row: r, column: c };
+    } else {
+        // If the selected space is not empty, recursively call randomSpot until an empty space is found
+        return randomSpot();
+    }
+}
+
+/**
+ * Simulate a cell being clicked by invoking the turnClick with the desired cell's ID 
+ * @param {*} row 
+ * @param {*} column 
+ */
+function simulateClick(row, column) {
+    let cell = row + "-" + column;
+    turnClick.call(document.getElementById(cell));
 }
 
 /**
@@ -262,6 +301,7 @@ function toggleinstructions() {
         modal.style.display = "none"
     }
 }
+
 
 
 
