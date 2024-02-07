@@ -19,7 +19,28 @@ let interval;
 
 window.onload = function() {
     setGame(rows, columns);
+    console.log("window is loaded")
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("Dom is loaded")
+    let instrOpen = document.getElementById("instrBtn");
+    instrOpen.addEventListener("click", toggleinstructions);
+
+    let instrClose = document.getElementById("instrClose");
+    instrClose.addEventListener("click", toggleinstructions);
+
+    let modal = document.querySelector(".modal");
+    modal.style.display = "none";
+
+    function toggleinstructions() {
+        if (modal.style.display === "none") {
+            modal.style.display = "block";
+        } else {
+            modal.style.display = "none";
+        }
+    }
+});
 
 /**
  * Setting up the grid after the page is loaded
@@ -135,7 +156,8 @@ function turnClick() {
 }
 
 /**
- * Start a timer that decrements count by one second
+ * Start a timer that decrements count by one second 
+ * and calls the skipTrun function once the count is down to 0
  * Source: https://www.shecodes.io/ - was adapted to suit the purpose of the game
  */
 function countDown() {
@@ -154,7 +176,8 @@ function countDown() {
 }
 
 /**
- * Restarts the countdown timer
+ * Restarts the countdown timer and cleares the interval each time
+ * then calls the CountDown function ensuring the count down is restarted
  */
 function resetCountDown() {
     clearInterval(interval);
@@ -168,6 +191,11 @@ function skipTurn() {
     }
 }
 
+/**
+ * Generates random row and column indices within the grid dimensions 
+ * and checks if the selected space is empty
+ * @returns The object with parameters row and column 
+ */
 function randomSpot() {
     // Generate random row and column indices within the grid dimensions
     let r = Math.floor(Math.random() * grid.length);
@@ -289,17 +317,6 @@ function checkTie() {
     if (!grid.flat().some(cell => cell === '')) {
         declareWinner("Tie Game!")
     } 
-}
-
-document.querySelector(".modal").style.display = "none";
-
-function toggleinstructions() {
-    let modal = document.querySelector(".modal")
-    if (modal.style.display === "none" ) {
-        modal.style.display = "block"
-    } else {
-        modal.style.display = "none"
-    }
 }
 
 
