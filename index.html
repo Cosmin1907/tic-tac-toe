@@ -5,8 +5,6 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
@@ -16,13 +14,17 @@
 
 <body>
   <h1>MegaGrid Tic Tac Toe</h1>
-  <div id="intro">
-    <h2>Short History XO</h2>
-    <p><i class="fa-solid fa-circle-xmark"></i> Tic-Tac-Toe has ancient origins, with variations played by civilizations such as the Egyptians and Romans. </p>
-    <p><i class="fa-solid fa-circle-xmark"></i> However, the modern version we know gained popularity in the 20th century.</p>
-    <button id="instrBtn">Instructions</button>
-  </div>
-  
+  <section id="homepage">
+    <div id="intro">
+      <h2>Short History XO</h2>
+      <p>Tic-Tac-Toe has ancient origins, with variations played by civilizations such as the Egyptians and Romans. </p>
+      <p>However, the modern version we know gained popularity in the 20th century.</p>
+    </div>
+    <div id="btnbox">
+      <button id="instrBtn">Instructions</button>
+      <a href="game.html" class="btn">Play Game</a>
+    </div>
+  </section>
   <div id="instr" class="modal">
     <div class="modal-content">
       <span id="instrClose" class="close">&times;</span>
@@ -32,9 +34,7 @@
         without a winner, resulting in a draw.</p>
     </div>
   </div>
-  <a href="game.html" class="btn">Play Game</a>
   <script src="assets/js/script.js"></script>
-  <script src="https://kit.fontawesome.com/d9a77b60d1.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

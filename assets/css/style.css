@@ -6,10 +6,17 @@ body {
     margin: 0;
 }
 
+#homepage {
+    background-color: #C6D6C9;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #game {
     background-color: #C6D6C9;
     padding: 2px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,9 +51,10 @@ body {
 }
 
 #intro {
-    background-color: #C6D6C9;
-    padding: 20px 5px;
-    margin: 10px;
+    max-width: 529px;
+    background-color: #A2AE95;
+    text-align: center;
+    padding: 15px;
     font-size: 20px;
 }
 
@@ -69,9 +77,11 @@ body {
 }
 
 #instrBtn {
+    font-family: 'Poor Story', system-ui;
     background-color: #57312D;
+    font-size: 20px;
     color: #C6D6C9;
-    padding: 10px 20px;
+    padding: 15px 30px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -89,6 +99,7 @@ body {
 .btn {
     display: inline-block;
     padding: 15px 30px;
+    font-size: 20px;
     background-color: #57312D; 
     color: #C6D6C9; 
     text-decoration: none;
@@ -108,6 +119,12 @@ body {
     background-color: #8D3D2F; 
 }
 
+#btnbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
 
 .endgame {
     display: none;
@@ -133,6 +150,7 @@ body {
     background-color: rgba(203, 138, 148, 0.9);
     
     position: absolute;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -169,6 +187,11 @@ body {
     .btn {
         margin-bottom: 0;
     }
+
+    #btnbox {
+       display: block;
+    }
+
 }
 
 /* Media query: tablets and larger (768px and up) */
@@ -190,4 +213,5 @@ body {
         height: 283px;
         max-width: 100px;
     }
+
 }
