@@ -15,20 +15,22 @@
   </head>
 
 <body>
-    <h2 id="player"></h2>
+    <h1 id="player"></h1>
     <section id="game">
-        <div id="countdown">Next Move in: 30 s</div>
+        <div id="elements">
+            <div id="countdown">Your next move awaits: 30 seconds left</div>
         <div id="grid"></div>
-        <div class="endgame">
-            <div class="text"></div>
-            <button onClick="startGame()" id="replayBtn">Replay</button>
-        </div>
         <div class="score">
             <h3>Score Board</h3>
             <div class="playerX">PlayerX: 0</div>
             <div class="playerO">PlayerO: 0</div>
         </div>
-        <a href="index.html" class="btn">End Game</a>
+        </div>
+        <div class="endgame">
+            <div class="text"></div>
+            <button onClick="startGame()" id="replayBtn">Replay</button>
+        </div>
+        <a href="index.html" id="gamebtn" class="btn">End Game</a>
     </section>
     <script src="assets/js/script.js"></script>
 </body>

@@ -167,7 +167,7 @@ function countDown() {
         count--;
         console.log(count);
         let time = document.getElementById("countdown");
-        time.innerText = `Next Move in: ${count} s`;
+        time.innerText = `Your next move awaits: ${count} seconds left`;
         if(count === 0) {
             clearInterval(interval); 
             skipTurn();
