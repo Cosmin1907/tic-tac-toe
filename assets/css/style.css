@@ -106,17 +106,6 @@ body {
     border-radius: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
-    
-    /* Smooth transition for hover effect */
-    transition: background-color 0.3s ease; 
-}
-
-.btn:hover {
-    background-color: #CB8A94; 
-}
-
-.btn:active {
-    background-color: #8D3D2F; 
 }
 
 #btnbox {
