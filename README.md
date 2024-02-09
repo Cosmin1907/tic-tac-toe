@@ -12,10 +12,32 @@ View the live site [here]()
 
 ## Features
 
-- **ex1**
+- **The Grid**
 
+The 9x9 grid is visualy represented by html elements that are created using JavaScript.
 
 ![EX01]()
+
+- **The Score Board**
+
+
+
+![EX02]()
+
+- **The Timer**
+
+
+![EX03]()
+
+- **Declaring player Win**
+
+
+![EX04]()
+
+- **Modal**
+
+
+![EX05]()
 
 ## Landing Page
 
@@ -32,7 +54,7 @@ View the live site [here]()
 
 ## Features Left to Implement
 
-Implement Player vs Computer feature using the MiniMax algorithm
+Implement Player vs Computer option using the MiniMax algorithm
 
 ## Design
 

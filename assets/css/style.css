@@ -207,6 +207,7 @@ body {
     #countdown {
         height: 283px;
         max-width: 100px;
+        line-height: 40px;
     }
 
     .endgame {
