@@ -88,7 +88,9 @@ body {
 }
 
 #replayBtn {
+    font-family: 'Poor Story', system-ui;
     background-color: #57312D;
+    font-size: 20px;
     color: #C6D6C9;
     padding: 10px 20px;
     border: none;
@@ -121,7 +123,7 @@ body {
     background-color: rgba(203, 138, 148, 0.8);
     
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -150%);
 
@@ -143,7 +145,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    padding: 25px;
+    padding: 15px;
     text-align: center;
     border-radius: 5px;
     color: white;
@@ -167,7 +169,7 @@ body {
   }
 
 
-/* Media query: large phones (425px and up) */
+/* Media query: large phones and larger (425px and up) */
 @media screen and (min-width: 425px) {
     #game {
         padding: 15px;
@@ -181,6 +183,10 @@ body {
        display: block;
     }
 
+    .modal {
+        top:30%;
+        width: 400px;
+    }
 }
 
 /* Media query: tablets and larger (768px and up) */
@@ -201,6 +207,10 @@ body {
     #countdown {
         height: 283px;
         max-width: 100px;
+    }
+
+    .endgame {
+        top:50%;
     }
 
 }
