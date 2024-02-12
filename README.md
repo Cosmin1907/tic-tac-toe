@@ -105,7 +105,6 @@ Utilized Chrome, Edge, Firefox browsers.
 Opened the browser and navigated to [Landing Page]().
 Opened developer tools and set to responsive mode.
 Decreased width to 320px, set zoom to 50%, and clicked/dragged the responsive window to maximum width.
-testede phone numbers
 
 - **Expected**
 
@@ -118,13 +117,13 @@ Website should be responsive on all screen sizes.
 - **Actual**
 
 
+
 ### Accessibility
 
-[Wave Accessibility](https://wave.webaim.org/) tool was used throughout development and for final testing of the deployed website to check for any aid accessibility testing.
+[Wave Accessibility](https://wave.webaim.org/) tool was used for final testing of the deployed website to check for any aid accessibility testing.
 
 Testing was focused to ensure the following criteria were met:
 
-- All forms have associated labels or aria-labels so that this is read out on a screen reader to users who tab to form inputs
 - Color contrasts meet a minimum ratio as specified in [WCAG 2.1 Contrast Guidelines](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
 - Heading levels are not missed or skipped to ensure the importance of content is relayed correctly to the end user
 - All content is contained within landmarks to ensure ease of use for assistive technology, allowing the user to navigate by page regions
@@ -135,6 +134,7 @@ Testing was focused to ensure the following criteria were met:
 
 
 ### Functional Testing
+
 
 
 - **Navigation**
@@ -187,7 +187,7 @@ No major bugs were left unfixed. Any minor issues or limitations are detailed he
 
 ### Version Control
 
-The site was created using Codeanywhere code editor and pushed to github to the repository ‘farmers-market’.
+The site was created using GitPod code editor and pushed to github to the repository ‘tic-tac-toe’.
 
 The following git commands were used throughout development to push code to the remote repo:
 
@@ -205,7 +205,7 @@ The following git commands were used throughout development to push code to the 
   - From the Build and deployment section, Branch sub section drop-down menu, select: main Click 'Save'
   - A live link will be displayed when published successfully.
 
-The live link can be found here - <>
+The live link can be found here - <https://cosmin1907.github.io/tic-tac-toe/>
 
 ### Clone the Repository Code Locally
 
@@ -223,9 +223,9 @@ The project will now of been cloned on your local machine for use.
 
 I drew inspiration and incorporated code from:
 
-[Youtube tutorial 01](https://youtu.be/4ARsthVnCTg?si=sZ1DGSHS9bwaNIsP)
+[Kenny Yip Coding](https://youtu.be/4ARsthVnCTg?si=sZ1DGSHS9bwaNIsP)
 
-[Youtube tutorial 02](https://youtu.be/P2TcQ3h0ipQ?si=j6nRsbbvn8JTbDJV)
+[freeCodeCamp](https://youtu.be/P2TcQ3h0ipQ?si=j6nRsbbvn8JTbDJV)
 
 [Shecodes](https://www.shecodes.io/athena/52336-how-to-create-a-countdown-timer-in-javascript)
 
@@ -243,4 +243,4 @@ I drew inspiration and incorporated code from:
 
   - Wikipedia was used for inspiration to write a short game history 
 
-  [Wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe#:~:text=An%20early%20variation%20of%20tic,empty%20spaces%20to%20keep%20playing.)
+  [Tic-tac-toe Wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe#:~:text=An%20early%20variation%20of%20tic,empty%20spaces%20to%20keep%20playing.)
