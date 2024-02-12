@@ -82,6 +82,15 @@ Implement Player vs Computer functionality using the MiniMax algorithm.
 
 ### Wireframes
 
+Landing Page
+
+![Landing Page](assets/images/gamewire.PNG)
+
+Game Page
+
+![Game Page](assets/images/gamewire.PNG)
+
+
 ## Testing
 
 ### Responsivness
