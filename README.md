@@ -102,7 +102,7 @@ Utilized Chrome, Edge, Firefox browsers.
 
 - **Steps to Test**
 
-Opened the browser and navigated to [Landing Page]().
+Opened the browser and navigated to [Landing Page](https://cosmin1907.github.io/tic-tac-toe/).
 Opened developer tools and set to responsive mode.
 Decreased width to 320px, set zoom to 50%, and clicked/dragged the responsive window to maximum width.
 
@@ -135,7 +135,23 @@ Testing was focused to ensure the following criteria were met:
 
 ### Functional Testing
 
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| ---------------------- | -------------------------------------------------------------------------------- | ---------------------------------------------- | ------------------------------------------------- | --------- |
+| **Buttons** | | | | |
+| Instructions  | Clicking will open the game instructions modal.                      | Clicked Instructions | Pop up modal openes over the screen  | Pass  |
+| Play Game       | Clicking will redirect the user to the Game page  | Clicked Play Game  | Redirected to the Game page.   | Pass |
+| End Game | Clicking will redirect the user to the landing page.                   | Clicked End Game | Redirected to the Landing page. | Pass      |
+| Replay | Clicking will reset the game grid and restart the counter                   | Clicked Replay | Game reseted and the counter restarted. | Pass      |
+| **Timer**  | | | | |
+| Countdown from 15s  | Replay button resets countdown; at 0, triggers random move and resets count | Let coundown reach zero, Clicked Replay button.   | Countdown hits zero: random move is made. Replay resets countdown. | Pass  |
+| **Score Board** | | | | |
+| Score | Win count increments by 1 for each player's win, tracking total wins | Played multiple games to ensure score increments accurately each time. | Score is incremented corectly at the end of each game. | Pass |
+| **Player Move** | | | | |
+| Player | Automatically announcing player's turn and prompting action after each turn change. | Played multiple games to verify player naming accuracy. | Player name and turn change executed accurately. | Pass |
+| **Declare Winner** | | | | |
+| Winner Modal | Automatically announcing the winning player and their number of moves.  | Played several games to confirm accurate recognition and reporting of the winning player. | The game accurately detects winning combinations and announces the winning player accordingly. | Pass |
 
+- In addition to manual tests, I conducted 100 random tests using the game's functionality. I set the countdown timer to 1 second and had the computer perform a random move every second until a winning combination was found.
 
 - **Navigation**
 
