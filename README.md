@@ -84,7 +84,7 @@ Implement Player vs Computer functionality using the MiniMax algorithm.
 
 Landing Page
 
-![Landing Page](assets/images/gamewire.PNG)
+![Landing Page](assets/images/landingwire.PNG)
 
 Game Page
 
