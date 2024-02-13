@@ -166,19 +166,19 @@ Verified links on all pages, ensuring expected navigation.
 
   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org)
 
-  ![Home Validator Results]()
-  ![Game Validator Results]()
+  ![Home Validator Results](assets/images/w3checkindex.PNG)
+  ![Game Validator Results](assets/images/w3checkgame.PNG)
 
 - CSS
 
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org)
 
-  ![CSS Validator Results]()
+  ![CSS Validator Results](assets/images/csscheckindex.PNG)
 
 ### Lighthouse Testing
 
-![Home Testing]()
-![Game Testing]()
+![Home Testing](assets/images/csscheckindex.PNG)
+![Game Testing](assets/images/csscheckindex.PNG)
 
 
 - **Additional Device Testing**
