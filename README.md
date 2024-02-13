@@ -154,6 +154,8 @@ Testing was focused to ensure the following criteria were met:
 
 - In addition to manual tests, I conducted 100 random tests using the game's functionality. I set the countdown timer to 1 second and had the computer perform a random move every second until a winning combination was found.
 
+![Game Testing](assets/images/100.PNG)
+
 
 - **Navigation**
 
