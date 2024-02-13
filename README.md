@@ -47,7 +47,7 @@ This feature begins by informing the players of who will move first and continue
 
 - **Info Modals**
 
-Their purpose is to provide information to the player when needed, without disrupting the game. Additionally, the gem modal also facilitates resetting the game to its initial state through a replay button.
+Their purpose is to provide information to the player when needed, without disrupting the game. Additionally, the game modal also facilitates resetting the game to its initial state through a replay button.
 
 
 ![Modal1](assets/images/winmodal.PNG)
@@ -151,7 +151,9 @@ Testing was focused to ensure the following criteria were met:
 | **Declare Winner** | | | | |
 | Winner Modal | Automatically announcing the winning player and their number of moves.  | Played several games to confirm accurate recognition and reporting of the winning player. | The game accurately detects winning combinations and announces the winning player accordingly. | Pass |
 
+
 - In addition to manual tests, I conducted 100 random tests using the game's functionality. I set the countdown timer to 1 second and had the computer perform a random move every second until a winning combination was found.
+
 
 - **Navigation**
 
