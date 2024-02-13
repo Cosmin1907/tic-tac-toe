@@ -172,7 +172,7 @@ function turnClick() {
  */
 function countDown() {
 
-    let count = 1;
+    let count = 15;
     interval = setInterval(function() {
         count--;
         console.log(count);
