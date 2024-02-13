@@ -177,8 +177,8 @@ Verified links on all pages, ensuring expected navigation.
 
 ### Lighthouse Testing
 
-![Home Testing](assets/images/csscheckindex.PNG)
-![Game Testing](assets/images/csscheckindex.PNG)
+![Home Testing](assets/images/lighthouseindex.PNG)
+![Game Testing](assets/images/lighthousegame.PNG)
 
 
 - **Additional Device Testing**
@@ -250,12 +250,6 @@ I drew inspiration and incorporated code from:
 [W3schools](https://www.w3schools.com/howto/howto_css_modals.asp)
 
 [Geeksforgeeks](https://www.geeksforgeeks.org/how-to-select-a-random-element-from-array-in-javascript/)
-
-
-
-- **Media**
-
-  - 
 
 - **Content**
 

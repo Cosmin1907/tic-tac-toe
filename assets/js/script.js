@@ -33,6 +33,11 @@ document.addEventListener("DOMContentLoaded", function() {
     let modal = document.querySelector(".modal");
     modal.style.display = "none";
 
+    /**
+     * Toggle the visibility of the instructions pop up 
+     * Improved based on the code's needs and inspired by:
+     * Source: https://www.w3schools.com/howto/howto_css_modals.asp
+     */
     function toggleinstructions() {
         if (modal.style.display === "none") {
             modal.style.display = "block";
@@ -46,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
  * Setting up the grid after the page is loaded
  * by visualy creating the HTML elements 
  * and records each cell based on its position in the grid.
+ * Source: https://youtu.be/4ARsthVnCTg?si=sZ1DGSHS9bwaNIsP
  */
 function setGame(rows, columns) {
     grid = [];
@@ -71,8 +77,9 @@ function setGame(rows, columns) {
 }
 
 /**
- * Resets the game to the initial state
- * and initiates turnClick function
+ * Resets the game to the initial state, and initiates turnClick function
+ * Improved based on the code's needs, uses functionality from the folowing source:
+ * https://youtu.be/P2TcQ3h0ipQ?si=8Q0lhJK11acKPFnd
  */
 function startGame() {
     // Hide the element with the class "endgame" by setting its display property to "none"
@@ -103,8 +110,11 @@ function startGame() {
 
 /**
  * Handles the logic for a player`s move, 
- * updating the game state, the visual representation on the board.
- * and initiates the checkWinner function
+ * updating the game state and the visual representation on the board.
+ * Initiates the checkWinner function.
+ * Improved based on the code's needs, uses functionality from the folowing source:
+ * https://youtu.be/4ARsthVnCTg?si=sZ1DGSHS9bwaNIsP
+ * Other sources: https://youtu.be/P2TcQ3h0ipQ?si=XYzpyCKo3Y0JJ_Qq
  */
 function turnClick() {
     console.log('I am clicking')
@@ -212,8 +222,8 @@ function randomSpot() {
 
 /**
  * Simulate a cell being clicked by invoking the turnClick with the desired cell's ID 
- * @param {*} row 
- * @param {*} column 
+ * @param {*represents the row index of a cell in a grid} row 
+ * @param {*represents the column index of a cell in a grid} column 
  */
 function simulateClick(row, column) {
     let cell = row + "-" + column;
@@ -223,6 +233,7 @@ function simulateClick(row, column) {
 /**
  * After a move is made, it checks if the player has won, 
  * and if so, it initiates the end-of-game process.
+ * Source: https://youtu.be/4ARsthVnCTg?si=sZ1DGSHS9bwaNIsP
  */
 function checkWinner() {
     console.log("I am checking")
@@ -288,6 +299,8 @@ function checkWinner() {
  * and updates the score
  * @param {*represents the row indice} r 
  * @param {*represents the column indice} c 
+ * Improved based on the code's needs
+ * Source: https://youtu.be/4ARsthVnCTg?si=EmCZv9OwZ3f5ggAs
  */
 function endGame(r, c) {
     if (grid[r][c] === playerO) {
@@ -305,6 +318,7 @@ function endGame(r, c) {
  * It's called after the game logic has determined the winner, 
  * and it updates the UI to reflect the outcome.
  * @param {*holds the value passed to it when the function was called} who 
+ * Source: https://youtu.be/P2TcQ3h0ipQ?si=zrfEHf7VO-Nu2fvP
  */
 function declareWinner(who) {
     document.querySelector(".endgame").style.display = "block";
@@ -312,7 +326,11 @@ function declareWinner(who) {
     gameOver = true;
 }
 
-
+/**
+ * Checks if there are no empty cells left in the grid.
+ * If all cells are filled, it declares the game as a tie by invoking declareWinner() 
+ * Part of the logic inspired by: https://youtu.be/P2TcQ3h0ipQ?si=zrfEHf7VO-Nu2fvP
+ */
 function checkTie() {
     if (!grid.flat().some(cell => cell === '')) {
         declareWinner("Tie Game!")
