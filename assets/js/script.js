@@ -17,6 +17,8 @@ let columns = 9;
 
 let interval;
 
+let grid = [];
+
 window.onload = function() {
     setGame(rows, columns);
     console.log("window is loaded")
@@ -137,7 +139,6 @@ function turnClick() {
 
     // Update the game grid with the current player's symbol (X or O)
     grid[r][c] = currPlayer;
-    let cell = this;
     
     console.log('Setting innerText:', currPlayer);
 
