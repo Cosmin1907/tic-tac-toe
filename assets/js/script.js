@@ -21,11 +21,9 @@ let grid = [];
 
 window.onload = function() {
     setGame(rows, columns);
-    console.log("window is loaded")
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("Dom is loaded")
     let instrOpen = document.getElementById("instrBtn");
     instrOpen.addEventListener("click", toggleinstructions);
 
