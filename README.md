@@ -90,6 +90,24 @@ Game Page
 
 ![Game Page](assets/images/gamewire.PNG)
 
+## Technolgies
+
+- HTML
+  - The structure of the Website was developed using HTML as the main language.
+- CSS
+  - The Website was styled using custom CSS in an external file.
+- JavaScript
+  - The game play logic was created using JavaScript in an external file.
+- Gitpod
+  - The website was developed using Gitpod Code IDE
+- GitHub
+  - Source code is hosted on GitHub and delpoyed using Git Pages.
+- Git
+  - Used to commit and push code during the development of the Website.
+- Favicon.io
+  - favicon files were created at https://favicon.io/favicon-converter/
+- balsamiq
+  - wireframes were created using balsamiq from https://balsamiq.cloud/
 
 ## Testing
 
@@ -116,7 +134,7 @@ Website should be responsive on all screen sizes.
 
 - **Actual**
 
-
+Executed as intended.
 
 ### Accessibility
 
