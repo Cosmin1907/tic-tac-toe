@@ -200,7 +200,7 @@ I used for testing the following browsers:
 
 ### Unfixed Bugs
 
-No major bugs were left unfixed. Any minor issues or limitations are detailed here: .........
+No major bugs were left unfixed. 
 
 
 ## Deployment
