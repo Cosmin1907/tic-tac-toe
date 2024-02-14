@@ -21,7 +21,7 @@ let grid = [];
 
 window.onload = function() {
     setGame(rows, columns);
-}
+};
 
 document.addEventListener("DOMContentLoaded", function() {
     let instrOpen = document.getElementById("instrBtn");
@@ -102,8 +102,8 @@ function startGame() {
     playerXmoves = 0;
     playerOmoves = 0;
     
-    let playerTurn = document.getElementById("player")
-    playerTurn.innerText = "X takes the opening move!"
+    let playerTurn = document.getElementById("player");
+    playerTurn.innerText = "X takes the opening move!";
     resetCountDown();
     
 }
@@ -138,16 +138,16 @@ function turnClick() {
     // Update the visual representation of the game board by setting the innerText of the clicked cell
     document.getElementsByClassName("cell")[r * columns + c].innerText = currPlayer;
     // Get the element representing whose turn it is and update it based on the current player
-    let playerTurn = document.getElementById("player")
+    let playerTurn = document.getElementById("player");
     
     if (currPlayer == playerX) {
         currPlayer = playerO;
         playerXmoves++;
-        playerTurn.innerText = "X moves! O's turn."
+        playerTurn.innerText = "X moves! O's turn.";
     } else {
         currPlayer = playerX;
         playerOmoves++;
-        playerTurn.innerText = "O moves! X's turn."
+        playerTurn.innerText = "O moves! X's turn.";
     }
 
     checkWinner();
@@ -290,10 +290,10 @@ function checkWinner() {
  */
 function endGame(r, c) {
     if (grid[r][c] === playerO) {
-        declareWinner(`Player O Wins! \nin ${playerOmoves} moves`)
+        declareWinner(`Player O Wins! \nin ${playerOmoves} moves`);
         playerOscore++;
     } else {
-        declareWinner(`Player X Wins! \nin ${playerXmoves} moves`)
+        declareWinner(`Player X Wins! \nin ${playerXmoves} moves`);
         playerXscore++;
     }
     document.querySelector(".score .playerX").innerText = `Player O: ${playerOscore}`;
@@ -319,7 +319,7 @@ function declareWinner(who) {
  */
 function checkTie() {
     if (!grid.flat().some(cell => cell === '')) {
-        declareWinner("Tie Game!")
+        declareWinner("Tie Game!");
     } 
 }
 
