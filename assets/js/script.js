@@ -117,9 +117,6 @@ function startGame() {
  * Other sources: https://youtu.be/P2TcQ3h0ipQ?si=XYzpyCKo3Y0JJ_Qq
  */
 function turnClick() {
-    console.log('I am clicking')
-    console.log('Current Player:', currPlayer);
-
     // Check if the game is already over, if so, return from the function
     if (gameOver) {
         return;
@@ -137,8 +134,6 @@ function turnClick() {
 
     // Update the game grid with the current player's symbol (X or O)
     grid[r][c] = currPlayer;
-    
-    console.log('Setting innerText:', currPlayer);
 
     // Update the visual representation of the game board by setting the innerText of the clicked cell
     document.getElementsByClassName("cell")[r * columns + c].innerText = currPlayer;
@@ -155,13 +150,8 @@ function turnClick() {
         playerTurn.innerText = "O moves! X's turn."
     }
 
-    console.log(grid);
-    console.log(coords);
-    
     checkWinner();
     resetCountDown();
-
-    console.log(`Player O Moves: ${playerOmoves}, Player X Moves: ${playerXmoves}`);
 }
 
 /**
@@ -174,7 +164,6 @@ function countDown() {
     let count = 15;
     interval = setInterval(function() {
         count--;
-        console.log(count);
         let time = document.getElementById("countdown");
         time.innerText = `Your next move awaits: ${count} seconds left`;
         if(count === 0) {
@@ -193,6 +182,10 @@ function resetCountDown() {
     countDown(); 
 }
 
+/**
+ * Skips a player's turn by randomly selecting a spot to simulate a click, 
+ * provided the game is not tied.
+ */
 function skipTurn() {
     let { row, column } = randomSpot();
     if (!checkTie()) {
@@ -235,14 +228,11 @@ function simulateClick(row, column) {
  * Source: https://youtu.be/4ARsthVnCTg?si=sZ1DGSHS9bwaNIsP
  */
 function checkWinner() {
-    console.log("I am checking")
-
     //check horizontally 
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < columns - 3; c++) {
             if (grid[r][c] != '') {
                 if (grid[r][c] == grid[r][c+1] && grid[r][c+1] == grid[r][c+2] && grid[r][c+2] == grid[r][c+3]) {
-                    console.log("Winner Found horizontally", r, c)
                     endGame(r, c);
                     return;
                 }
@@ -255,7 +245,6 @@ function checkWinner() {
         for (let r = 0; r < rows - 3; r++) {
             if (grid[r][c] != '') {
                 if (grid[r][c] == grid[r+1][c] && grid[r+1][c] == grid[r+2][c] && grid[r+2][c] == grid[r+3][c]) {
-                    console.log("Winner Found vertically", r, c)
                     endGame(r, c);
                     return;
                 }
@@ -268,7 +257,6 @@ function checkWinner() {
         for (let c = 0; c < columns - 3; c++) {
             if (grid[r][c] != '') {
                 if (grid[r][c] == grid[r+1][c+1] && grid[r+1][c+1] == grid[r+2][c+2] && grid[r+2][c+2] == grid[r+3][c+3]) {
-                    console.log("Winner Found anti diagonally", r, c)
                     endGame(r, c);
                     return;
                 }
@@ -282,7 +270,6 @@ function checkWinner() {
         for ( let c = 0; c < columns - 3; c++) {
             if (grid[r][c] != '') {
                 if (grid[r][c] == grid[r-1][c+1] && grid[r-1][c+1] == grid[r-2][c+2] && grid[r-2][c+2] == grid[r-3][c+3]) {
-                    console.log("Winner Found diagonally", r, c)
                     endGame(r, c);
                     return;
                 }
