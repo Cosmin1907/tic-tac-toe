@@ -199,7 +199,7 @@ Verified links on all pages, ensuring expected navigation.
 
   - No errors were returned when passing through [JsHint validator](https://jigsaw.w3.org)
 
-  ![JavaScript Validator Results]()
+  ![JavaScript Validator Results](assets/images/javascripttest.PNG)
 
 ### Lighthouse Testing
 
