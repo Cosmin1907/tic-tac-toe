@@ -106,7 +106,7 @@ Game Page
   - Used to commit and push code during the development of the Website.
 - Favicon.io
   - favicon files were created at https://favicon.io/favicon-converter/
-- balsamiq
+- Balsamiq
   - wireframes were created using balsamiq from https://balsamiq.cloud/
 
 ## Testing
@@ -170,7 +170,7 @@ Testing was focused to ensure the following criteria were met:
 | Winner Modal | Automatically announcing the winning player and their number of moves.  | Played several games to confirm accurate recognition and reporting of the winning player. | The game accurately detects winning combinations and announces the winning player accordingly. | Pass |
 
 
-- In addition to manual tests, I conducted 100 random tests using the game's functionality. I set the countdown timer to 1 second and had the computer perform a random move every second until a winning combination was found.
+- In addition to manual tests, I conducted 100 random tests using the game's functionality. I set the countdown timer to 1 second. The computer made random moves every second until a winning combination was found.
 
 ![Game Testing](assets/images/100.PNG)
 
@@ -194,6 +194,12 @@ Verified links on all pages, ensuring expected navigation.
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org)
 
   ![CSS Validator Results](assets/images/csscheckindex.PNG)
+
+- JavaScript
+
+  - No errors were returned when passing through [JsHint validator](https://jigsaw.w3.org)
+
+  ![JavaScript Validator Results]()
 
 ### Lighthouse Testing
 
@@ -271,8 +277,14 @@ I drew inspiration and incorporated code from:
 
 [Geeksforgeeks](https://www.geeksforgeeks.org/how-to-select-a-random-element-from-array-in-javascript/)
 
+- **Media**
+
+- The Favicon was created using the following resource: 
+
+  [Favicon](https://favicon.io/favicon-converter/)
+
 - **Content**
 
-  - Wikipedia was used for inspiration to write a short game history 
+- Wikipedia was used for inspiration to write a short game history 
 
   [Tic-tac-toe Wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe#:~:text=An%20early%20variation%20of%20tic,empty%20spaces%20to%20keep%20playing.)
